@@ -47,7 +47,7 @@
         "testDir": "A:/New folder/playWrightTest/playWrightTest",
         "testIgnore": [],
         "testMatch": [
-          "tests/login.test.ts"
+          "tests/calenderPicker.test.ts"
         ],
         "timeout": 30000
       }
@@ -60,14 +60,14 @@
   },
   "suites": [
     {
-      "title": "tests\\login.test.ts",
-      "file": "tests/login.test.ts",
+      "title": "tests\\calenderPicker.test.ts",
+      "file": "tests/calenderPicker.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "test",
-          "ok": false,
+          "title": "calender using moment",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -79,134 +79,26 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 12698,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n    at A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts:18:22",
-                    "location": {
-                      "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                      "column": 22,
-                      "line": 18
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'guna'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Continue'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/accountrtrt\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 17992,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "location": {
-                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                        "column": 22,
-                        "line": 18
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'guna'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Continue'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/accountrtrt\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts:18:22\u001b[22m"
+                      "text": "January 2024 -*/*--*/-*/-*---/-/\n"
                     }
                   ],
-                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-02T07:01:52.737Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-login-test\\test-failed-1.png"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                    "column": 22,
-                    "line": 18
-                  }
-                },
-                {
-                  "workerIndex": 1,
-                  "status": "failed",
-                  "duration": 11968,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n    at A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts:18:22",
-                    "location": {
-                      "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                      "column": 22,
-                      "line": 18
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'guna'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Continue'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/accountrtrt\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                        "column": 22,
-                        "line": 18
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'guna'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Continue'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/accountrtrt\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts:18:22\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2024-01-02T07:02:06.662Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-login-test-retry1\\test-failed-1.png"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                    "column": 22,
-                    "line": 18
-                  }
-                },
-                {
-                  "workerIndex": 2,
-                  "status": "failed",
-                  "duration": 12668,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n    at A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts:18:22",
-                    "location": {
-                      "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                      "column": 22,
-                      "line": 18
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'guna'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Continue'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/accountrtrt\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                        "column": 22,
-                        "line": 18
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\u001b[7mrtrt\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'guna'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Continue'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/accountrtrt\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts:18:22\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 2,
-                  "startTime": "2024-01-02T07:02:19.725Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-login-test-retry2\\test-failed-1.png"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\login.test.ts",
-                    "column": 22,
-                    "line": 18
-                  }
+                  "startTime": "2024-01-02T12:04:36.943Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "ef85df6096d4739f2c52-ae81ae019f26c5029d38",
-          "file": "tests/login.test.ts",
-          "line": 3,
+          "id": "a7f071e5f46e89fb7d6d-4ef24407281ea485eae5",
+          "file": "tests/calenderPicker.test.ts",
+          "line": 12,
           "column": 5
         }
       ]
@@ -214,11 +106,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-02T07:01:52.316Z",
-    "duration": 40970.310000000005,
-    "expected": 0,
+    "startTime": "2024-01-02T12:04:36.464Z",
+    "duration": 19468.165,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
