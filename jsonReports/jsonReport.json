@@ -47,7 +47,7 @@
         "testDir": "A:/New folder/playWrightTest/playWrightTest",
         "testIgnore": [],
         "testMatch": [
-          "tests/calenderPicker.test.ts"
+          "tests/uploadAndDownload.test.ts"
         ],
         "timeout": 30000
       }
@@ -60,13 +60,13 @@
   },
   "suites": [
     {
-      "title": "tests\\calenderPicker.test.ts",
-      "file": "tests/calenderPicker.test.ts",
+      "title": "tests\\uploadAndDownload.test.ts",
+      "file": "tests/uploadAndDownload.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "calender using moment",
+          "title": "upload file",
           "ok": true,
           "tags": [],
           "tests": [
@@ -80,25 +80,21 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 17992,
+                  "duration": 6286,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "January 2024 -*/*--*/-*/-*---/-/\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-02T12:04:36.943Z",
+                  "startTime": "2024-01-02T14:04:34.646Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "a7f071e5f46e89fb7d6d-4ef24407281ea485eae5",
-          "file": "tests/calenderPicker.test.ts",
-          "line": 12,
+          "id": "6b19fa5fa10ef4be3f7a-ce4c38b47de99ad355b5",
+          "file": "tests/uploadAndDownload.test.ts",
+          "line": 26,
           "column": 5
         }
       ]
@@ -106,8 +102,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-02T12:04:36.464Z",
-    "duration": 19468.165,
+    "startTime": "2024-01-02T14:04:34.219Z",
+    "duration": 7520.786,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

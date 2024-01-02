@@ -14,17 +14,35 @@ test("calender using moment", async ({ page }) => {
     await page.locator(`text ="Bootstrap Date Picker"`).click();
     await page.click(`//*[@placeholder="Start date"]`);
 
-    let date = moment().format("YYYY-MM-DD");
+    let date = moment().format("MMMM YYYY");
+    console.log(date, "-*-*-*--*--*");
+
+    await dateSelectPicker(22, "January 2024");
+
+    await page.click(`//*[@placeholder="End date"]`);
+    await dateSelectPicker(22, "April 2024");
 
 
-    let mmYY = await page.locator(`(//*[@class="table-condensed"]//th[@class="datepicker-switch"])[1]`)
-    const prevButton = await page.locator(`(//*[@class="table-condensed"]//th[@class="prev"])[1]`);
-    const nextButton = await page.locator(`(//*[@class="table-condensed"]//th[@class="next"])[1]`);
 
-    let monthSelect: string = "January 2023";
-    console.log(await mmYY.textContent(), "-*/*--*/-*/-*---/-/")
-    while ((await mmYY.textContent()) != monthSelect) {
-        await prevButton.click();
+
+
+
+    async function dateSelectPicker(date: any, monthSelect: string) {
+        let mmYY = await page.locator(`(//*[@class="table-condensed"]//th[@class="datepicker-switch"])[1]`)
+        const prevButton = await page.locator(`(//*[@class="table-condensed"]//th[@class="prev"])[1]`);
+        const nextButton = await page.locator(`(//*[@class="table-condensed"]//th[@class="next"])[1]`);
+
+
+        const thisMonth = moment(monthSelect, "MMMM YYYY").isBefore();
+        console.log(await mmYY.textContent(), "-*/*--*/-*/-*---/-/")
+        while ((await mmYY.textContent()) != monthSelect) {
+            if (thisMonth) {
+                await prevButton.click();
+            } else {
+                await nextButton.click();
+            }
+            await page.click(`//td[@class="day"][text()="${date}"]`)
+        }
     }
 })
 
