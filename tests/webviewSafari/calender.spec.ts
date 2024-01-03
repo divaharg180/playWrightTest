@@ -1,14 +1,15 @@
 import moment from "moment";
 import { test, expect } from '@playwright/test';
-import LoginPage from "../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import LoginPage from "../../pageObjects/loginPage";
+const { webkit } = require('playwright')
 
 const capabilities = {
-    'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserName': 'pw-webkit', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
     'browserVersion': 'latest',
     'LT:Options': {
-        'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 4',
+        "platformName": "macOs Big Sur",
+        "platformVersion": "118",
+        "build": "Playwright Safari Build - 2",
         'name': 'calender date picker',
         "user": `divaharg180`,
         "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
@@ -25,10 +26,13 @@ let context: any;
 let page: any;
 let device: any;
 test("calender date picker", async () => {
-    device = await chromium.connect(
+    device = await webkit.connect(
         `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
             JSON.stringify(capabilities))}`,
     );
+
+
+
 
     context = await device.newContext();
     page = await context.newPage();

@@ -12,15 +12,16 @@ module.exports = {
     //   use: { ...devices['Desktop Firefox'] },
     // },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+      viewport: { width: 2560, height: 1600 },
+    },
 
-    // /* Test against mobile viewports. */
+    /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
+    //   use: { ...devices['Galaxy S21 5G'] },
     // },
     // {
     //   name: 'Mobile Safari',
@@ -35,14 +36,14 @@ module.exports = {
     //     channel: 'msedge'
     //   },
     // },
-    {
-      name: 'chrome',
-      use: {
-        ...devices['Desktop Chrome'],
-        viewport: { width: 2560, height: 1600 },
-        channel: 'chrome'
-      },
-    },
+    // {
+    //   name: 'chrome',
+    //   use: {
+    //     ...devices['Desktop Chrome'],
+    //     viewport: { width: 2560, height: 1600 },
+    //     channel: 'chrome'
+    //   },
+    // },
     // {
     //   name: 'safari',
     //   use: {
@@ -56,12 +57,20 @@ module.exports = {
 
 
   testMatch: [
-    "tests/login.spec.ts",
-    "tests/dropDown.spec.ts",
-    "tests/calender.spec.ts",
-    "tests/example.spec.ts",
-    "tests/ecom.spec.ts",
-    "tests/formFill.spec.ts",
+    // "tests/webview/login.spec.ts",
+    // "tests/webview/dropDown.spec.ts",
+    // "tests/webview/calender.spec.ts",
+    // "tests/webview/example.spec.ts",
+    // "tests/webview/ecom.spec.ts",
+    // "tests/webview/formFill.spec.ts",
+
+
+    "tests/webviewSafari/login.spec.ts",
+    "tests/webviewSafari/dropDown.spec.ts",
+    "tests/webviewSafari/calender.spec.ts",
+    "tests/webviewSafari/example.spec.ts",
+    "tests/webviewSafari/ecom.spec.ts",
+    "tests/webviewSafari/formFill.spec.ts",
 
   ], // Fix the typo here
   use: {

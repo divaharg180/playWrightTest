@@ -1,13 +1,14 @@
 import { test, expect } from '@playwright/test';
-import LoginPage from "../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import LoginPage from "../../pageObjects/loginPage";
+const { webkit } = require('playwright')
 
 const capabilities = {
-    'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-    'browserVersion': 'latest',
-    'LT:Options': {
-        'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 4',
+  'browserName': 'pw-webkit', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+  'browserVersion': 'latest',
+  'LT:Options': {
+    "platformName": "macOs Big Sur",
+    "platformVersion": "118",
+        "build": "Playwright Safari Build - 2",
         'name': 'page download and upload',
         "user": `divaharg180`,
         "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
@@ -25,14 +26,16 @@ let page: any;
 let device: any;
 
 test.describe("page download and upload", async () => {
-    device = await chromium.connect(
+    device = await webkit.connect(
         `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-            JSON.stringify(capabilities))}`,
-    );
-
-    context = await device.newContext();
-    page = await context.newPage();
-
+          JSON.stringify(capabilities))}`,
+      );
+    
+    
+    
+    
+      context = await device.newContext();
+      page = await context.newPage();
 
     test("Download file", async () => {
 
@@ -54,7 +57,7 @@ test.describe("page download and upload", async () => {
     });
 
     test("Upload file", async () => {
-        // let device = await chromium.connect(
+        // let device = await _android.connect(
         //     `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
         //         JSON.stringify(capabilities))}`,
         // );

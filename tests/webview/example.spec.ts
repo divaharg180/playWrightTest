@@ -1,6 +1,6 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
-import LoginPage from "../pageObjects/loginPage";
+import LoginPage from "../../pageObjects/loginPage";
 const { chromium } = require('playwright')
 
 const capabilities = {
@@ -8,7 +8,7 @@ const capabilities = {
   'browserVersion': 'latest',
   'LT:Options': {
     'platform': 'Windows 10',
-    'build': 'Playwright Single Build - 4',
+    'build': 'Playwright Single Build - 1',
     'name': 'get started link',
     "user": `divaharg180`,
     "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
