@@ -4,7 +4,8 @@
   "description": "automation testing",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test --headed"
+    "test": "npx playwright test --headed",
+    "codeGen": "npx playwright codegen"
   },
   "keywords": [],
   "author": "",
