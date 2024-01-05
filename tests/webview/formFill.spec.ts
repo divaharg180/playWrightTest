@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import LoginPage from "../../pageObjects/loginPage";
 const { chromium } = require('playwright')
 
@@ -7,7 +7,7 @@ const capabilities = {
     'browserVersion': 'latest',
     'LT:Options': {
         'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 1',
+        'build': 'Playwright Single Build - 5',
         'name': 'form fill details',
         "user": `divaharg180`,
         "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
@@ -49,6 +49,7 @@ test("form fill details", async () => {
     await loginPage.enterDetailsPage(`//*[@placeholder="Address 2"]`, "Address 2");
     await loginPage.enterDetailsPage(`//*[@placeholder="State"]`, "State");
     await loginPage.enterDetailsPage(`//*[@placeholder="Zip code"]`, "60044");
+    await expect(page).toHaveURL("https://ecommerce-playground.lambdatest.io/index.php?route=account/account")
 
     await page.close();
     await context.close();

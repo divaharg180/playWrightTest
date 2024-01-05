@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test --headed",
+    "chrome":"npx playwright test --project=chrome",
     "codeGen": "npx playwright codegen"
   },
   "keywords": [],

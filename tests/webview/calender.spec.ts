@@ -8,7 +8,7 @@ const capabilities = {
     'browserVersion': 'latest',
     'LT:Options': {
         'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 1',
+        'build': 'Playwright Single Build - 5',
         'name': 'calender date picker',
         "user": `divaharg180`,
         "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,

@@ -9,7 +9,7 @@ const capabilities = {
     'LT:Options': {
         "platformName": "macOs Big Sur",
         "platformVersion": "118",
-        "build": "Playwright Safari Build - 2",
+        "build": "Playwright Safari Build - 3",
         'name': 'calender date picker',
         "user": `divaharg180`,
         "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
