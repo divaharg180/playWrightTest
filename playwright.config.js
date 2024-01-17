@@ -12,11 +12,11 @@ module.exports = {
     //   use: { ...devices['Desktop Firefox'] },
     // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-      viewport: { width: 2560, height: 1600 },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    //   viewport: { width: 2560, height: 1600 },
+    // },
 
     /* Test against mobile viewports. */
     // {
@@ -44,33 +44,33 @@ module.exports = {
     //     channel: 'chrome'
     //   },
     // },
-    // {
-    //   name: 'safari',
-    //   use: {
-    //     ...devices['Desktop Safari'],
-    //     channel: 'safari'
-    //   },
-    // },
+    {
+      name: 'safari',
+      use: {
+        ...devices['Desktop Safari'],
+        channel: 'safari',
+        viewport: { width: 2560, height: 1600 },
+
+      },
+    },
   ],
 
 
 
 
   testMatch: [
-    // "tests/webview/login.spec.ts",
-    // "tests/webview/dropDown.spec.ts",
-    // "tests/webview/calender.spec.ts",
-    // "tests/webview/example.spec.ts",
-    // "tests/webview/ecom.spec.ts",
-    // "tests/webview/formFill.spec.ts",
+    "tests/webview/login.spec.ts",
+    "tests/webview/dropDown.spec.ts",
+    "tests/webview/example.spec.ts",
+    "tests/webview/ecom.spec.ts",
+    "tests/webview/formFill.spec.ts",
 
 
-    "tests/webviewSafari/login.spec.ts",
-    "tests/webviewSafari/dropDown.spec.ts",
-    "tests/webviewSafari/calender.spec.ts",
-    "tests/webviewSafari/example.spec.ts",
-    "tests/webviewSafari/ecom.spec.ts",
-    "tests/webviewSafari/formFill.spec.ts",
+    // "tests/webviewSafari/login.spec.ts",
+    // "tests/webviewSafari/dropDown.spec.ts",
+    // "tests/webviewSafari/calender.spec.ts",
+    // "tests/webviewSafari/example.spec.ts",
+    // "tests/webviewSafari/ecom.spec.ts",
 
   ], // Fix the typo here
   use: {
@@ -79,9 +79,7 @@ module.exports = {
     video: "only-on-failure",
     fullyParallel: true,
     workers: 1,
-    // os: "Windows",
-    // osVersion: "latest",
-    // browserName: "Google Chrome",
+
     launchOptions: {
       slowMo: 3000
     }

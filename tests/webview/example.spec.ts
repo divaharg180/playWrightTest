@@ -8,7 +8,7 @@ const capabilities = {
   'browserVersion': 'latest',
   'LT:Options': {
     'platform': 'Windows 10',
-    'build': 'Playwright Single Build - 1',
+    'build': 'Playwright Test - Demo',
     'name': 'get started link',
     "user": `divaharg180`,
     "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
@@ -17,7 +17,7 @@ const capabilities = {
     'console': true,
     'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
     'tunnelName': '', // Optional
-    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+    "geoLocation": "US" // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
   }
 }
 

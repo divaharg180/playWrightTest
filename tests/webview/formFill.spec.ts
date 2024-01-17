@@ -6,8 +6,8 @@ const capabilities = {
     'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
     'browserVersion': 'latest',
     'LT:Options': {
-        'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 1',
+        'platform': 'Windows 11',
+        'build': 'Playwright Test - Demo',
         'name': 'form fill details',
         "user": `divaharg180`,
         "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
@@ -16,7 +16,8 @@ const capabilities = {
         'console': true,
         'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
         'tunnelName': '', // Optional
-        'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+        "timezone": "Kolkata",
+        "geoLocation": "In" // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
     }
 }
 let context: any;

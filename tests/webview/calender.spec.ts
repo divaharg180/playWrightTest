@@ -1,23 +1,20 @@
 import moment from "moment";
 import { test, expect } from '@playwright/test';
-import LoginPage from "../../pageObjects/loginPage";
 const { chromium } = require('playwright')
 
 const capabilities = {
-    'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserName': 'chrome', 
     'browserVersion': 'latest',
     'LT:Options': {
         'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 1',
+        'build': 'Playwright Test - Demo',
         'name': 'calender date picker',
         "user": `divaharg180`,
         "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
         'network': true,
         'video': true,
         'console': true,
-        'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-        'tunnelName': '', // Optional
-        'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+        "geoLocation": "US"
     }
 }
 
@@ -40,10 +37,7 @@ test("calender date picker", async () => {
 })
 
 test("calender using moment", async () => {
-    // let device = await chromium.connect(
-    //     `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-    //         JSON.stringify(capabilities))}`,
-    // );
+
 
     const context = await device.newContext();
     const page = await context.newPage();
