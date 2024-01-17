@@ -87,7 +87,7 @@
                     {
                       "workerIndex": 0,
                       "status": "failed",
-                      "duration": 779,
+                      "duration": 481,
                       "error": {
                         "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
                         "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
@@ -115,7 +115,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-01-05T08:02:10.418Z",
+                      "startTime": "2024-01-17T04:47:04.462Z",
                       "attachments": [],
                       "errorLocation": {
                         "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
@@ -126,7 +126,7 @@
                     {
                       "workerIndex": 1,
                       "status": "failed",
-                      "duration": 270,
+                      "duration": 225,
                       "error": {
                         "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
                         "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
@@ -154,7 +154,7 @@
                       ],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2024-01-05T08:02:11.735Z",
+                      "startTime": "2024-01-17T04:47:05.365Z",
                       "attachments": [],
                       "errorLocation": {
                         "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
@@ -186,7 +186,7 @@
                     {
                       "workerIndex": 2,
                       "status": "failed",
-                      "duration": 275,
+                      "duration": 214,
                       "error": {
                         "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
                         "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
@@ -214,7 +214,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-01-05T08:02:12.522Z",
+                      "startTime": "2024-01-17T04:47:05.943Z",
                       "attachments": [],
                       "errorLocation": {
                         "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
@@ -225,7 +225,7 @@
                     {
                       "workerIndex": 3,
                       "status": "failed",
-                      "duration": 268,
+                      "duration": 239,
                       "error": {
                         "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
                         "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
@@ -253,7 +253,7 @@
                       ],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2024-01-05T08:02:13.347Z",
+                      "startTime": "2024-01-17T04:47:06.526Z",
                       "attachments": [],
                       "errorLocation": {
                         "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
@@ -277,8 +277,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-05T08:02:09.650Z",
-    "duration": 3991.577,
+    "startTime": "2024-01-17T04:47:03.919Z",
+    "duration": 2867.503,
     "expected": 0,
     "skipped": 0,
     "unexpected": 2,

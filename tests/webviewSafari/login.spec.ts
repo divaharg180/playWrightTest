@@ -11,8 +11,8 @@ const capabilities = {
     // "isRealMobile": true,
     "build": "Playwright Safari Build - 3",
     'name': 'test login',
-    "user": `divaharg180`,
-    "accessKey": `mmzqxJPCZdw78OehLdx4q0fLuv3STae3T7sqmIQC3q1s20IB6w`,
+    "user": `divahar`,
+    "accessKey": `uAsYjKmU1MUvxm8MdwKUtZufxGptw30jvSvx8oupdRzspU8gxB`,
     'network': true,
     'video': true,
     'console': true,
@@ -45,7 +45,7 @@ test('test login', async () => {
   await page.goto('https://playwright.dev/');
   await page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/login');
   await page.getByPlaceholder('E-Mail Address').click();
-  await page.getByPlaceholder('E-Mail Address').fill('divaharg180@gmail.com');
+  await page.getByPlaceholder('E-Mail Address').fill('divahar@gmail.com');
   await page.getByPlaceholder('Password').click();
   await page.getByPlaceholder('Password').press('CapsLock');
   await page.getByPlaceholder('Password').fill('D');
