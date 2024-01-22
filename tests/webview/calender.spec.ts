@@ -1,37 +1,8 @@
 import moment from "moment";
-import { test, expect } from '@playwright/test';
-import LoginPage from "../../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import {test} from "../../lambdatest-setup"
 
-const capabilities = {
-    'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-    'browserVersion': 'latest',
-    'LT:Options': {
-        'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 5',
-        'name': 'calender date picker',
-        "user": `divahar`,
-        "accessKey": `uAsYjKmU1MUvxm8MdwKUtZufxGptw30jvSvx8oupdRzspU8gxB`,
-        'network': true,
-        'video': true,
-        'console': true,
-        'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-        'tunnelName': '', // Optional
-        'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-    }
-}
+test("calender date picker", async ({ page }) => {
 
-let context: any;
-let page: any;
-let device: any;
-test("calender date picker", async () => {
-    device = await chromium.connect(
-        `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-            JSON.stringify(capabilities))}`,
-    );
-
-    context = await device.newContext();
-    page = await context.newPage();
     await page.goto("https://www.lambdatest.com/selenium-playground/");
     await page.locator(`text ="Bootstrap Date Picker"`).click();
 
@@ -39,14 +10,9 @@ test("calender date picker", async () => {
     await page.fill(`//*[@id="birthday"]`, date);
 })
 
-test("calender using moment", async () => {
-    // let device = await chromium.connect(
-    //     `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-    //         JSON.stringify(capabilities))}`,
-    // );
+test("calender using moment", async ({ page }) => {
 
-    const context = await device.newContext();
-    const page = await context.newPage();
+
     await page.goto("https://www.lambdatest.com/selenium-playground/");
     await page.locator(`text ="Bootstrap Date Picker"`).click();
     await page.click(`//*[@placeholder="Start date"]`);
@@ -60,9 +26,6 @@ test("calender using moment", async () => {
     await dateSelectPicker(22, "April 2024");
 
 
-    await page.close();
-    await context.close();
-    await device.close();
 
 
 

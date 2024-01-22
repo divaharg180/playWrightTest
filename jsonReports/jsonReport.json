@@ -1,9 +1,9 @@
 {
   "config": {
-    "configFile": "A:\\New folder\\playWrightTest\\playWrightTest\\playwright.config.js",
-    "rootDir": "A:/New folder/playWrightTest/playWrightTest",
+    "configFile": "A:\\New folder\\playWrightTest\\playWrightTest\\lambdatest.config.js",
+    "rootDir": "A:/New folder/playWrightTest/playWrightTest/tests",
     "forbidOnly": false,
-    "fullyParallel": false,
+    "fullyParallel": true,
     "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -41,247 +41,361 @@
       {
         "outputDir": "A:/New folder/playWrightTest/playWrightTest/test-results",
         "repeatEach": 1,
-        "retries": 1,
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "A:/New folder/playWrightTest/playWrightTest",
+        "retries": 0,
+        "id": "chrome:latest:Windows 10@lambdatest",
+        "name": "chrome:latest:Windows 10@lambdatest",
+        "testDir": "A:/New folder/playWrightTest/playWrightTest/tests",
         "testIgnore": [],
         "testMatch": [
-          "pomtest/addToCart.fixture.spec.ts"
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 120000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.40.1",
+    "version": "1.41.1",
     "workers": 2,
     "webServer": null
   },
   "suites": [
     {
-      "title": "pomtest\\addToCart.fixture.spec.ts",
-      "file": "pomtest/addToCart.fixture.spec.ts",
+      "title": "webview\\calender.spec.ts",
+      "file": "webview/calender.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Page ecom register and login",
-          "file": "pomtest/addToCart.fixture.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
+          "title": "calender date picker",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "Register PomPage test",
-              "ok": false,
-              "tags": [],
-              "tests": [
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 481,
-                      "error": {
-                        "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
-                        "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
-                        "location": {
-                          "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                          "column": 43,
-                          "line": 196
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                            "column": 43,
-                            "line": 196
-                          },
-                          "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n\n\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "-***/*/*/*chrome else***divahar*****\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-01-17T04:47:04.462Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                        "column": 43,
-                        "line": 196
-                      }
-                    },
-                    {
-                      "workerIndex": 1,
-                      "status": "failed",
-                      "duration": 225,
-                      "error": {
-                        "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
-                        "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
-                        "location": {
-                          "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                          "column": 43,
-                          "line": 196
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                            "column": 43,
-                            "line": 196
-                          },
-                          "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n\n\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "-***/*/*/*chrome else***divahar*****\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2024-01-17T04:47:05.365Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                        "column": 43,
-                        "line": 196
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 17807,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:21:21.604Z",
+                  "attachments": []
                 }
               ],
-              "id": "c0708ac9b8b7809252c7-a59a7d68feb7fadf7f6f",
-              "file": "pomtest/addToCart.fixture.spec.ts",
-              "line": 7,
-              "column": 9
-            },
-            {
-              "title": "Login page test",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "failed",
-                      "duration": 214,
-                      "error": {
-                        "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
-                        "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
-                        "location": {
-                          "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                          "column": 43,
-                          "line": 196
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                            "column": 43,
-                            "line": 196
-                          },
-                          "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n\n\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "-***/*/*/*chrome else***divahar*****\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-01-17T04:47:05.943Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                        "column": 43,
-                        "line": 196
-                      }
-                    },
-                    {
-                      "workerIndex": 3,
-                      "status": "failed",
-                      "duration": 239,
-                      "error": {
-                        "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n",
-                        "stack": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)",
-                        "location": {
-                          "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                          "column": 43,
-                          "line": 196
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                            "column": 43,
-                            "line": 196
-                          },
-                          "message": "Error: browserType.connect: WebSocket error: wss://cdp.lambdatest.com/playwright 502 Bad Gateway\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n\nCall log:\n  \u001b[2m- <ws connecting> wss://cdp.lambdatest.com/playwright\u001b[22m\n\u001b[2m  - <ws unexpected response> wss://cdp.lambdatest.com/playwright 502 Bad Gateway\u001b[22m\n\u001b[2m<html>\u001b[22m\r\n\u001b[2m<head><title>502 Bad Gateway</title></head>\u001b[22m\r\n\u001b[2m<body>\u001b[22m\r\n\u001b[2m<center><h1>502 Bad Gateway</h1></center>\u001b[22m\r\n\u001b[2m<hr><center>nginx</center>\u001b[22m\r\n\u001b[2m</body>\u001b[22m\r\n\u001b[2m</html>\u001b[22m\r\n\n\u001b[2m  - <ws error> wss://cdp.lambdatest.com/playwright error WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws connect error> wss://cdp.lambdatest.com/playwright WebSocket was closed before the connection was established\u001b[22m\n\u001b[2m  - <ws disconnected> wss://cdp.lambdatest.com/playwright code=1006 reason=\u001b[22m\n\n\n\u001b[90m   at \u001b[39mbase\\pomFixture.ts:196\n\n\u001b[0m \u001b[90m 194 |\u001b[39m             \u001b[90m// );\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 195 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m             \u001b[36mconst\u001b[39m device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mconnect(\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 |\u001b[39m                 \u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 198 |\u001b[39m \u001b[32m                    JSON.stringify(capabilities))}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 |\u001b[39m             )\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts:196:43)\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "-***/*/*/*chrome else***divahar*****\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2024-01-17T04:47:06.526Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\base\\pomFixture.ts",
-                        "column": 43,
-                        "line": 196
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "c0708ac9b8b7809252c7-3984b7861201c71ea974",
-              "file": "pomtest/addToCart.fixture.spec.ts",
-              "line": 25,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "0ec2abb5bbd5b957e53e-e33c0ef66debbcfa7074",
+          "file": "webview/calender.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "calender using moment",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 20111,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "January 2024 -*-*-*--*--*\n"
+                    },
+                    {
+                      "text": "January 2024 -*/*--*/-*/-*---/-/\n"
+                    },
+                    {
+                      "text": "January 2024 -*/*--*/-*/-*---/-/\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:21:21.659Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec2abb5bbd5b957e53e-8b99004caa244be44aa2",
+          "file": "webview/calender.spec.ts",
+          "line": 13,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "webview\\dropDown.spec.ts",
+      "file": "webview/dropDown.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "dropDown select",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 19417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:21:40.243Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c40b056912e2bfc34299-a25328c16284bb711e4b",
+          "file": "webview/dropDown.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "webview\\ecom.spec.ts",
+      "file": "webview/ecom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ecom page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 19442,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:21:42.605Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "efe6948ace5e11372080-483104efa428ed0272c3",
+          "file": "webview/ecom.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "webview\\example.spec.ts",
+      "file": "webview/example.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "has title",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 10335,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:21:59.678Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "012c517c422a35730497-fafa6ba260c8f1f41175",
+          "file": "webview/example.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "get started link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 10582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:22:02.063Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "012c517c422a35730497-813ddb315dba32ce6147",
+          "file": "webview/example.spec.ts",
+          "line": 12,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "webview\\formFill.spec.ts",
+      "file": "webview/formFill.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "form fill details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 26300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:22:10.040Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "15c7851105824ad315b1-56bc61c31d9fd9816773",
+          "file": "webview/formFill.spec.ts",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "webview\\login.spec.ts",
+      "file": "webview/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "timedOut",
+                  "duration": 120000,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\tests\\webview\\login.spec.ts",
+                        "column": 65,
+                        "line": 15
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByRole('link', { name: ' Edit your account' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Divan9013@'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m' Edit your account'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Last Name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'guna'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Continue'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at A:\\New folder\\playWrightTest\\playWrightTest\\tests\\webview\\login.spec.ts:15:65\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-22T09:22:12.656Z",
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3bd31031191d8aa2561b-5bd630dc0348dc711f7c",
+          "file": "webview/login.spec.ts",
+          "line": 4,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-17T04:47:03.919Z",
-    "duration": 2867.503,
-    "expected": 0,
+    "startTime": "2024-01-22T09:21:16.211Z",
+    "duration": 177171.698,
+    "expected": 7,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 1,
     "flaky": 0
   }
 }

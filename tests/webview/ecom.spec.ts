@@ -1,42 +1,11 @@
-import { test, expect } from '@playwright/test';
-import LoginPage from "../../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import {test} from "../../lambdatest-setup"
 
-const capabilities = {
-  'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-  'browserVersion': 'latest',
-  'LT:Options': {
-    'platform': 'Windows 10',
-    'build': 'Playwright Single Build - 5',
-    'name': 'ecom page',
-    "user": `divahar`,
-    "accessKey": `uAsYjKmU1MUvxm8MdwKUtZufxGptw30jvSvx8oupdRzspU8gxB`,
-    'network': true,
-    'video': true,
-    'console': true,
-    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-    'tunnelName': '', // Optional
-    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-  }
-}
+test('ecom page', async ({ page }) => {
 
-
-let context: any;
-let page: any;
-let device: any;
-test('ecom page', async () => {
-
-  device = await chromium.connect(
-    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-      JSON.stringify(capabilities))}`,
-  );
-
-  context = await device.newContext();
-  page = await context.newPage();
   await page.goto('https://www.SauceDemo.com');
   await page.locator('[data-test="username"]').click();
   await page.locator('[data-test="username"]').click();
-  await page.locator('[data-test="username"]').fill('divahar');
+  await page.locator('[data-test="username"]').fill('divaharg0');
   await page.locator('[data-test="password"]').click();
   await page.locator('[data-test="password"]').fill('test');
   await page.locator('[data-test="login-button"]').click();
@@ -60,7 +29,7 @@ test('ecom page', async () => {
   await page.locator('[data-test="remove-sauce-labs-bolt-t-shirt"]').click();
   await page.locator('[data-test="checkout"]').click();
   await page.locator('[data-test="firstName"]').click();
-  await page.locator('[data-test="firstName"]').fill('divahar');
+  await page.locator('[data-test="firstName"]').fill('divaharg0');
   await page.locator('[data-test="lastName"]').click();
   await page.locator('[data-test="lastName"]').fill('g');
   await page.locator('[data-test="postalCode"]').click();
@@ -69,7 +38,5 @@ test('ecom page', async () => {
   await page.locator('[data-test="finish"]').click();
   await page.getByRole('heading', { name: 'Thank you for your order!' }).click();
   await page.locator('[data-test="back-to-products"]').click();
-  await page.close();
-  await context.close();
-  await device.close();
+
 });

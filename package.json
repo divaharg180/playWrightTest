@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test --headed",
-    "chrome":"npx playwright test --project=chrome",
-    "codeGen": "npx playwright codegen"
+    "chrome": "npx playwright test --project=chrome",
+    "codeGen": "npx playwright codegen",
+    "lambdatest": "npx playwright test --config=./lambdatest.config.js --workers=2"
   },
   "keywords": [],
   "author": "",

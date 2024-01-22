@@ -1,36 +1,11 @@
-import { test, expect } from "@playwright/test";
+import {test} from "../../lambdatest-setup"
 import LoginPage from "../../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import { expect } from "@playwright/test";
 
-const capabilities = {
-    'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-    'browserVersion': 'latest',
-    'LT:Options': {
-        'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 5',
-        'name': 'form fill details',
-        "user": `divahar`,
-        "accessKey": `uAsYjKmU1MUvxm8MdwKUtZufxGptw30jvSvx8oupdRzspU8gxB`,
-        'network': true,
-        'video': true,
-        'console': true,
-        'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-        'tunnelName': '', // Optional
-        'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-    }
-}
-let context: any;
-let page: any;
-let device: any;
 
-test("form fill details", async () => {
-    device = await chromium.connect(
-        `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-            JSON.stringify(capabilities))}`,
-    );
 
-    context = await device.newContext();
-    page = await context.newPage();
+
+test("form fill details", async ({ page }) => {
 
     const loginPage = new LoginPage(page);
 
@@ -38,8 +13,8 @@ test("form fill details", async () => {
     await page.goto("https://www.lambdatest.com/selenium-playground/");
     await page.locator(`text ="Input Form Submit"`).click();
 
-    await loginPage.enterDetailsPage(`//*[@placeholder="Name"]`, "Divahar");
-    await loginPage.enterDetailsPage(`//*[text()="Input form validations"]/following::*[@type="email"]`, "divahar@iterasolutions.co.in");
+    await loginPage.enterDetailsPage(`//*[@placeholder="Name"]`, "divaharg0");
+    await loginPage.enterDetailsPage(`//*[text()="Input form validations"]/following::*[@type="email"]`, "divaharg0@iterasolutions.co.in");
     await loginPage.enterDetailsPage(`//*[@placeholder="Password"]`, "Diva1234");
     await loginPage.enterDetailsPage(`//*[@placeholder="Company"]`, "company");
     await loginPage.enterDetailsPage(`//*[@placeholder="Website"]`, "www.google.com");
@@ -49,9 +24,5 @@ test("form fill details", async () => {
     await loginPage.enterDetailsPage(`//*[@placeholder="Address 2"]`, "Address 2");
     await loginPage.enterDetailsPage(`//*[@placeholder="State"]`, "State");
     await loginPage.enterDetailsPage(`//*[@placeholder="Zip code"]`, "60044");
-    await expect(page).toHaveURL("https://ecommerce-playground.lambdatest.io/index.php?route=account/account")
 
-    await page.close();
-    await context.close();
-    await device.close();
 })

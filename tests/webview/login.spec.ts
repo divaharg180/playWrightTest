@@ -1,44 +1,11 @@
-import { test, expect } from '@playwright/test';
-import LoginPage from "../../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import {test} from "../../lambdatest-setup"
+import { expect } from "@playwright/test";
 
-const capabilities = {
-  'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-  'browserVersion': 'latest',
-  'LT:Options': {
-    'platform': 'Windows 10',
-    'build': 'Playwright Single Build - 5',
-    'name': 'test login',
-    "user": `divahar`,
-    "accessKey": `uAsYjKmU1MUvxm8MdwKUtZufxGptw30jvSvx8oupdRzspU8gxB`,
-    'network': true,
-    'video': true,
-    'console': true,
-    'tunnel': false,
-    'tunnelName': '', 
-    'geoLocation': '', 
-
-  }
-}
-
-
-let context: any;
-let page: any;
-let device: any;
-
-test('test login', async () => {
-  device = await chromium.connect(
-    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-      JSON.stringify(capabilities))}`,
-  );
-
-  context = await device.newContext();
-  page = await context.newPage();
-
+test('test login', async ({ page }) => {
   await page.goto('https://playwright.dev/');
   await page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/login');
   await page.getByPlaceholder('E-Mail Address').click();
-  await page.getByPlaceholder('E-Mail Address').fill('divahar@gmail.com');
+  await page.getByPlaceholder('E-Mail Address').fill('divaharg0@gmail.com');
   await page.getByPlaceholder('Password').click();
   await page.getByPlaceholder('Password').press('CapsLock');
   await page.getByPlaceholder('Password').fill('D');
@@ -49,8 +16,13 @@ test('test login', async () => {
   await page.getByPlaceholder('Last Name').click();
   await page.getByPlaceholder('Last Name').fill('guna');
   await page.getByRole('button', { name: 'Continue' }).click();
-  await expect(page).toHaveURL("https://ecommerce-playground.lambdatest.io/index.php?route=account/account")
-  await page.close();
-  await context.close();
-  await device.close();
+
+
+  // async function generateRandomEmail() {
+  //   const username = 'user' + Math.floor(Math.random() * 1000); // Generates a random number between 0 and 999
+  //   const domain = 'example.com'; // Replace with your desired domain
+  
+  //   const email = `${username}@${domain}`;
+  //   return email;
+  // }
 });

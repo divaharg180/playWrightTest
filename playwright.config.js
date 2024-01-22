@@ -63,11 +63,11 @@ module.exports = {
     // "tests/webview/example.spec.ts",
     // "tests/webview/ecom.spec.ts",
     // "tests/webview/formFill.spec.ts",
-
+    "tests/webview/uploadAndDownload.spec.ts",
 
     //"pomtest/addToCart.spec.ts",
     // "fixtures/fixture.test.ts",
-    "pomtest/addToCart.fixture.spec.ts"
+    // "pomtest/addToCart.fixture.spec.ts"
 
     // "tests/webviewSafari/login.spec.ts",
     // "tests/webviewSafari/dropDown.spec.ts",
@@ -78,10 +78,10 @@ module.exports = {
 
   ], // Fix the typo here
   use: {
-      // connectOptions: {
-      //   wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-      //     JSON.stringify(capabilities))}`
-      // },
+    // connectOptions: {
+    //   wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+    //     JSON.stringify(capabilities))}`
+    // },
     baseURL: `https://ecommerce-playground.lambdatest.io/index.php?`,
     headless: false,
     screenshot: "only-on-failure",
@@ -92,7 +92,7 @@ module.exports = {
     // osVersion: "latest",
     // browserName: "Google Chrome",
     launchOptions: {
-     // slowMo: 3000
+      // slowMo: 3000
     }
   },
   retries: 1,

@@ -1,52 +1,16 @@
-// @ts-check
-import { test, expect } from '@playwright/test';
-import LoginPage from "../../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import { test } from "../../lambdatest-setup"
+import { expect } from "@playwright/test";
 
-const capabilities = {
-  'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-  'browserVersion': 'latest',
-  'LT:Options': {
-    'platform': 'Windows 10',
-    'build': 'Playwright Single Build - 5',
-    'name': 'get started link',
-    "user": `divahar`,
-    "accessKey": `uAsYjKmU1MUvxm8MdwKUtZufxGptw30jvSvx8oupdRzspU8gxB`,
-    'network': true,
-    'video': true,
-    'console': true,
-    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-    'tunnelName': '', // Optional
-    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-  }
-}
+test('has title', async ({ page }) => {
 
-let context: any;
-let page: any;
-let device: any;
-
-test('has title', async () => {
-  device = await chromium.connect(
-    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-      JSON.stringify(capabilities))}`,
-  );
-
-  context = await device.newContext();
-  page = await context.newPage();
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test('get started link', async () => {
-  // let device = await chromium.connect(
-  //   `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-  //     JSON.stringify(capabilities))}`,
-  // );
+test('get started link', async ({ page }) => {
 
-  // const context = await device.newContext();
-  // const page = await context.newPage();
   await page.goto('https://playwright.dev/');
 
   // Click the get started link.
@@ -54,7 +18,5 @@ test('get started link', async () => {
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-  await page.close();
-  await context.close();
-  await device.close();
+
 });

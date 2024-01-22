@@ -1,45 +1,14 @@
-import { test, expect } from '@playwright/test';
-import LoginPage from "../../pageObjects/loginPage";
-const { chromium } = require('playwright')
+import {test} from "../../lambdatest-setup"
 
-const capabilities = {
-    'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-    'browserVersion': 'latest',
-    'LT:Options': {
-        'platform': 'Windows 10',
-        'build': 'Playwright Single Build - 5',
-        'name': 'dropDown select',
-        "user": `divahar`,
-        "accessKey": `uAsYjKmU1MUvxm8MdwKUtZufxGptw30jvSvx8oupdRzspU8gxB`,
-        'network': true,
-        'video': true,
-        'console': true,
-        'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-        'tunnelName': '', // Optional
-        'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-    }
-}
+test("dropDown select", async ({ page }) => {
 
-let context: any;
-let page: any;
-let device: any;
-test("dropDown select", async () => {
-    device = await chromium.connect(
-        `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-            JSON.stringify(capabilities))}`,
-    );
-
-    context = await device.newContext();
-    page = await context.newPage();
     await page.goto("https://www.lambdatest.com/selenium-playground/");
     await page.locator(`text ="JQuery Select dropdown"`).click();
     await selectCountry(1, `//*[@id="select2-country-results"]`, "India")
     await page.waitForTimeout(5000);
 
 
-    await page.close();
-    await context.close();
-    await device.close();
+
 
     async function selectCountry(selectIndex, xpathSelector, countryName) {
         await page.click(`(//*[@role="combobox"])[${selectIndex}]`);
