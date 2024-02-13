@@ -1,5 +1,5 @@
 // @ts-check
-const { devices } = require('@playwright/test');
+const { devices } = require("@playwright/test");
 
 /**
  * Read environment variables from file.
@@ -7,21 +7,26 @@ const { devices } = require('@playwright/test');
  */
 // require('dotenv').config();
 
-
 /**
  * @see https://playwright.dev/docs/test-configuration
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
 const config = {
-  // testDir: './tests',
+//   testDir: "./tests",
+//   testMatch: "**/*.js",
+
+  // Use globalSetup & globalTearedown only if browserstack.local = true
+  globalSetup: require.resolve("./global-setup"),
+  globalTeardown: require.resolve("./global-teardown"),
+
   /* Maximum time one test can run for. */
-  timeout: 150 * 1000,
+  timeout: 90 * 1000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 15000
+    timeout: 5000,
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -32,11 +37,7 @@ const config = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["dot"], ["json", {
-    outputFile: "jsonReports/jsonReport.json"
-  }], ["html", {
-    open: "never"
-  }]],
+  reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
@@ -45,57 +46,47 @@ const config = {
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: "on-first-retry",
   },
 
   /* Configure projects for major browsers */
   projects: [
-
-    // LambdaTest Cloud
     {
-      name: 'chrome:latest:MacOS Catalina@lambdatest',
+      name: "chrome@latest:Windows 10@browserstack",
       use: {
-        viewport: { width: 1920, height: 1080 }
-      }
+        browserName: "chromium",
+        channel: "chrome",
+        
+      },
     },
     // {
-    //   name: 'chrome:latest:Windows 10@lambdatest',
+    //   name: "playwright-webkit@latest:OSX Ventura@browserstack",
     //   use: {
-    //     viewport: { width: 1280, height: 720 }
-    //   }
+    //     browserName: "chromium",
+    //     channel: "chrome",
+    //   },
     // },
     // {
-    //   name: 'pw-firefox:latest:Windows 10@lambdatest',
+    //   name: "chrome@Samsung Galaxy S22:13@browserstack-mobile",
     //   use: {
-    //     viewport: { width: 1280, height: 720 }
-    //   }
-    // },
-    // {
-    //   name: 'pw-webkit:latest:Windows 10@lambdatest',
-    //   use: {
-    //     viewport: { width: 1920, height: 1080 }
-    //   }
-    // },
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
+    //     baseURL: "https://www.bstackdemo.com/",
+    //     browserName: "chromium",
+    //     channel: "chrome",
+    //   },
     // },
   ],
   testMatch: [
 
     "tests/webview/test.spec.ts",
+  ],
+  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
+  // outputDir: 'test-results/',
 
-    
-    // "tests/webview/ecom.spec.ts",
-    // "tests/webview/calender.spec.ts",
-    // "tests/webview/dropDown.spec.ts",
-    // "tests/webview/example.spec.ts",
-    // "tests/webview/formFill.spec.ts",
-    // "tests/webview/login.spec.ts",
-
-
-
-  ]
+  /* Run your local dev server before starting the tests */
+  // webServer: {
+  //   command: 'npm run start',
+  //   port: 3000,
+  // },
 };
 
 module.exports = config;

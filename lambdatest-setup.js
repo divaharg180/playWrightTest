@@ -1,31 +1,26 @@
-/**
- * Add the file in your test suite to run tests on LambdaTest.
- * Import `test` object from this file in the tests.
- */
+
 const base = require('@playwright/test')
 const path = require('path')
 const { chromium } = require('playwright')
 const cp = require('child_process');
 const playwrightClientVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
 
-// LambdaTest capabilities
 const capabilities = {
     'LT:Options': {
-        'build': `Playwright Build one`,
+        'build': `Test demo Jan'23`,
         'name': 'Playwright Test',
-        "user": `divaharg0`,
-        "accessKey": `dpPISuiB1u6nQTDWx8g3K2ssrfpnAVP4dj57DHSaGF3CpSoeW1`,
+        "user": `divaharcoretopia`,
+        "accessKey": `30p71Y16ej5CgXujgBoUNbYKtXpjarGnOxd0PeQWiLRu9QakbN`,
         'network': true,
         'video': true,
         'console': true,
-        'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-        'tunnelName': '', // Optional
-        'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+        'tunnel': false,
+        'tunnelName': '',
+        'geoLocation': 'US',
         'playwrightClientVersion': playwrightClientVersion
     }
 }
 
-// Patching the capabilities dynamically according to the project name.
 const modifyCapabilities = (configName, testName) => {
     let config = configName.split('@lambdatest')[0]
     let [browserName, browserVersion, platform] = config.split(':')
@@ -39,7 +34,6 @@ const getErrorMessage = (obj, keys) => keys.reduce((obj, key) => (typeof obj == 
 
 exports.test = base.test.extend({
     page: async ({ page, playwright }, use, testInfo) => {
-        // Configure LambdaTest platform for cross-browser testing
         let fileName = testInfo.file.split(path.sep).pop()
         if (testInfo.project.name.match(/lambdatest/)) {
             modifyCapabilities(testInfo.project.name, `${testInfo.title} - ${fileName}`)

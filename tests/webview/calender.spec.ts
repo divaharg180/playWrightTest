@@ -18,7 +18,6 @@ test("calender using moment", async ({ page }) => {
     await page.click(`//*[@placeholder="Start date"]`);
 
     let date = moment().format("MMMM YYYY");
-    console.log(date, "-*-*-*--*--*");
 
     await dateSelectPicker(22, "January 2024");
 
@@ -36,7 +35,6 @@ test("calender using moment", async ({ page }) => {
 
 
         const thisMonth = moment(monthSelect, "MMMM YYYY").isBefore();
-        console.log(await mmYY.textContent(), "-*/*--*/-*/-*---/-/")
         while ((await mmYY.textContent()) != monthSelect) {
             if (thisMonth) {
                 await prevButton.click();

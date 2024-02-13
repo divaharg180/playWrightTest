@@ -7,14 +7,17 @@
     "test": "npx playwright test --headed",
     "chrome": "npx playwright test --project=chrome",
     "codeGen": "npx playwright codegen",
-    "lambdatest": "npx playwright test --config=./lambdatest.config.js --workers=2"
+    "lambdatest": "npx playwright test --config=./lambdatest.config.js --workers=2",
+    "browserstack": "npx playwright test --config=./browserstack.config.js --workers=2"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.1",
-    "@types/node": "^20.10.6"
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.10.6",
+    "browserstack-local": "^1.5.1"
   },
   "dependencies": {
     "@types/moment": "^2.13.0",
