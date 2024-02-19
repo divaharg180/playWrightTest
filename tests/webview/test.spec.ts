@@ -14,7 +14,7 @@ test('register and login page', async ({ page }) => {
   await page.getByPlaceholder('Password').fill('U67dQBvGdE2j');
   await page.getByRole('button', { name: 'Log In!' }).click();
   await expect(page.locator('h4')).toContainText('Overview for Pranesh');
-  await expect(page.locator('#datepicker')).toHaveValue('02/13/2024');
+  await expect(page.locator('#datepicker')).toHaveValue('02/14/2024');
   await expect(page.locator('body')).toContainText('1 Ready for Offer');
   await expect(page.locator('body')).toContainText('120 File Review');
   await expect(page.locator('body')).toContainText('0 My Tasks');
@@ -22,7 +22,7 @@ test('register and login page', async ({ page }) => {
   await expect(page.locator('body')).toContainText('120 Checked Out');
   await expect(page.locator('body')).toContainText('0 Urgent Tasks');
   await expect(page.locator('body')).toContainText('28 Deeds Pending');
-  await expect(page.locator('body')).toContainText('6 Offers to Send');
+  await expect(page.locator('body')).toContainText('8 Offers to Send');
   await expect(page.locator('body')).toContainText('1 Unreceived Requests');
 
 

@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -42,12 +42,38 @@
         "outputDir": "A:/New folder/playWrightTest/playWrightTest/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "id": "chrome:latest:MacOS Catalina@lambdatest",
-        "name": "chrome:latest:MacOS Catalina@lambdatest",
+        "id": "chrome:latest:Windows 10@lambdatest",
+        "name": "chrome:latest:Windows 10@lambdatest",
         "testDir": "A:/New folder/playWrightTest/playWrightTest",
         "testIgnore": [],
         "testMatch": [
-          "tests/webview/test.spec.ts"
+          "tests/webview/upload.spec.ts"
+        ],
+        "timeout": 150000
+      },
+      {
+        "outputDir": "A:/New folder/playWrightTest/playWrightTest/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "Galaxy*:12:android@lambdatest",
+        "name": "Galaxy*:12:android@lambdatest",
+        "testDir": "A:/New folder/playWrightTest/playWrightTest",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/webview/upload.spec.ts"
+        ],
+        "timeout": 150000
+      },
+      {
+        "outputDir": "A:/New folder/playWrightTest/playWrightTest/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "A:/New folder/playWrightTest/playWrightTest",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/webview/upload.spec.ts"
         ],
         "timeout": 150000
       }
@@ -60,41 +86,153 @@
   },
   "suites": [
     {
-      "title": "tests\\webview\\test.spec.ts",
-      "file": "tests/webview/test.spec.ts",
+      "title": "tests\\webview\\upload.spec.ts",
+      "file": "tests/webview/upload.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "register and login page",
-          "ok": true,
+          "title": "upload image in mobile cases",
+          "ok": false,
           "tags": [],
           "tests": [
             {
               "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chrome:latest:MacOS Catalina@lambdatest",
-              "projectName": "chrome:latest:MacOS Catalina@lambdatest",
+              "projectId": "chrome:latest:Windows 10@lambdatest",
+              "projectName": "chrome:latest:Windows 10@lambdatest",
               "results": [
                 {
                   "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 19620,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, stat 'A:\\New folder\\playWrightTest\\playWrightTest\\tests\\webview\\uploadItems\\sample.pdf'",
+                    "stack": "Error: ENOENT: no such file or directory, stat 'A:\\New folder\\playWrightTest\\playWrightTest\\tests\\webview\\uploadItems\\sample.pdf'\n"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: ENOENT: no such file or directory, stat 'A:\\New folder\\playWrightTest\\playWrightTest\\tests\\webview\\uploadItems\\sample.pdf'\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-02-19T03:38:20.384Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-webview-upload-upload-image-in-mobile-cases-chrome-latest-Windows-10-lambdatest\\test-failed-2.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-webview-upload-upload-image-in-mobile-cases-chrome-latest-Windows-10-lambdatest\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-webview-upload-upload-image-in-mobile-cases-chrome-latest-Windows-10-lambdatest\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Galaxy*:12:android@lambdatest",
+              "projectName": "Galaxy*:12:android@lambdatest",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 1466,
+                  "error": {
+                    "message": "Internal Server Error: android.connect: Real Mobile Automation not allowed on your current plan. Please upgrade or contact support",
+                    "stack": "Internal Server Error: android.connect: Real Mobile Automation not allowed on your current plan. Please upgrade or contact support\n    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\lambdatest-setup.js:68:41)",
+                    "location": {
+                      "file": "A:\\New folder\\playWrightTest\\playWrightTest\\lambdatest-setup.js",
+                      "column": 41,
+                      "line": 68
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mlambdatest-setup.js:68\n\n\u001b[0m \u001b[90m 66 |\u001b[39m             \u001b[36mif\u001b[39m (testInfo\u001b[33m.\u001b[39mproject\u001b[33m.\u001b[39mname\u001b[33m.\u001b[39mmatch(\u001b[35m/android/\u001b[39m)) {\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m                 \u001b[90m// Android test\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m                 device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m _android\u001b[33m.\u001b[39mconnect(\u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m                 \u001b[36mawait\u001b[39m device\u001b[33m.\u001b[39mshell(\u001b[32m\"am force-stop com.android.chrome\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 70 |\u001b[39m                 console\u001b[33m.\u001b[39mlog(\u001b[32m`Model:: ${device.model()}, serial:: ${device.serial()}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "A:\\New folder\\playWrightTest\\playWrightTest\\lambdatest-setup.js",
+                        "column": 41,
+                        "line": 68
+                      },
+                      "message": "Internal Server Error: android.connect: Real Mobile Automation not allowed on your current plan. Please upgrade or contact support\n\n\u001b[90m   at \u001b[39mlambdatest-setup.js:68\n\n\u001b[0m \u001b[90m 66 |\u001b[39m             \u001b[36mif\u001b[39m (testInfo\u001b[33m.\u001b[39mproject\u001b[33m.\u001b[39mname\u001b[33m.\u001b[39mmatch(\u001b[35m/android/\u001b[39m)) {\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m                 \u001b[90m// Android test\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m                 device \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m _android\u001b[33m.\u001b[39mconnect(\u001b[32m`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m                 \u001b[36mawait\u001b[39m device\u001b[33m.\u001b[39mshell(\u001b[32m\"am force-stop com.android.chrome\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 70 |\u001b[39m                 console\u001b[33m.\u001b[39mlog(\u001b[32m`Model:: ${device.model()}, serial:: ${device.serial()}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m\u001b[0m\n\n\u001b[2m    at Object.page (A:\\New folder\\playWrightTest\\playWrightTest\\lambdatest-setup.js:68:41)\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-02-19T03:38:20.339Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-webview-upload-upload-image-in-mobile-cases-Galaxy-12-android-lambdatest\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-webview-upload-upload-image-in-mobile-cases-Galaxy-12-android-lambdatest\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "A:\\New folder\\playWrightTest\\playWrightTest\\lambdatest-setup.js",
+                    "column": 41,
+                    "line": 68
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Safari",
+              "projectName": "Mobile Safari",
+              "results": [
+                {
+                  "workerIndex": 2,
                   "status": "passed",
-                  "duration": 58216,
+                  "duration": 10041,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-02-13T05:21:15.525Z",
-                  "attachments": []
+                  "startTime": "2024-02-19T03:38:26.921Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-webview-upload-upload-image-in-mobile-cases-Mobile-Safari\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "A:\\New folder\\playWrightTest\\playWrightTest\\test-results\\tests-webview-upload-upload-image-in-mobile-cases-Mobile-Safari\\video.webm"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "6195fe29e48eef9f3c01-9468dea193372d325e84",
-          "file": "tests/webview/test.spec.ts",
-          "line": 6,
+          "id": "c6a33d61353449f1f382-21ce2aa8c6b817dd4146",
+          "file": "tests/webview/upload.spec.ts",
+          "line": 5,
           "column": 5
         }
       ]
@@ -102,11 +240,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-02-13T05:21:11.743Z",
-    "duration": 62494.259,
+    "startTime": "2024-02-19T03:38:12.385Z",
+    "duration": 28891.663,
     "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 2,
     "flaky": 0
   }
 }
