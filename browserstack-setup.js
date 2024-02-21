@@ -17,10 +17,10 @@ const caps = {
   browserName: "chrome",
   realMobile: "true",
   name: "My android playwright test",
-  build: "playwright-build-1",
-  "browserstack.username": process.env.BROWSERSTACK_USERNAME || "divaharg_gHYyQM",
+  build: "playwright-build-100",
+  "browserstack.username": process.env.BROWSERSTACK_USERNAME || "jegadeeshwaranm_swvxKX",
   "browserstack.accessKey":
-    process.env.BROWSERSTACK_ACCESS_KEY || "KjZxZEJiXC5EtxXxs6ox",
+    process.env.BROWSERSTACK_ACCESS_KEY || "EzSCZwyqgVEtzj1zYr2X",
   "browserstack.local": process.env.BROWSERSTACK_LOCAL || false,
 };
 
@@ -28,7 +28,7 @@ exports.bsLocal = new BrowserStackLocal.Local();
 
 // replace YOUR_ACCESS_KEY with your key. You can also set an environment variable - "BROWSERSTACK_ACCESS_KEY".
 exports.BS_LOCAL_ARGS = {
-  key: process.env.BROWSERSTACK_ACCESS_KEY || "KjZxZEJiXC5EtxXxs6ox",
+  key: process.env.BROWSERSTACK_ACCESS_KEY || "EzSCZwyqgVEtzj1zYr2X",
 };
 
 // Patching the capabilities dynamically according to the project name.

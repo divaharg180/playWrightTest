@@ -1,6 +1,8 @@
 // @ts-check
 const { devices } = require("@playwright/test");
+// import {loadEnvVars} from "./envConfig";
 
+// loadEnvVars();
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -66,18 +68,20 @@ const config = {
     //     channel: "chrome",
     //   },
     // },
-    // {
-    //   name: "chrome@Samsung Galaxy S22:13@browserstack-mobile",
-    //   use: {
-    //     baseURL: "https://www.bstackdemo.com/",
-    //     browserName: "chromium",
-    //     channel: "chrome",
-    //   },
-    // },
+    {
+      name: "chrome@Samsung Galaxy S22:13@browserstack-mobile",
+      use: {
+        baseURL: "https://www.bstackdemo.com/",
+        browserName: "chromium",
+        channel: "chrome",
+      },
+    },
   ],
   testMatch: [
 
     "tests/webview/test.spec.ts",
+        'tests/webview/upload.spec.ts',
+
   ],
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   // outputDir: 'test-results/',
